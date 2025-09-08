@@ -21,3 +21,4 @@ print("Chao cac ban !")
 # cau5
 name=input("Moi ban nhap ho va ten: ")
 print("Xin chao: ",name)
+ print('bai 1:')
