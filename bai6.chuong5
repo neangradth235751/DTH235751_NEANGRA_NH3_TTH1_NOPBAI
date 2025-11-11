@@ -1,0 +1,19 @@
+import re
+
+def NegativeNumberInStrings(s: str) -> list:
+    negative_strings = re.findall(r'(?<!\d)-\d+', s)
+    negative_numbers = [int(num_str) for num_str in negative_strings]
+    return negative_numbers
+
+# --- Ví dụ kiểm tra ---
+chuoi_mau = "abc-5xyz-12k9l--p"
+
+ket_qua = NegativeNumberInStrings(chuoi_mau)
+
+print(f"Chuỗi đầu vào: \"{chuoi_mau}\"")
+print(f"Danh sách các số nguyên âm: {ket_qua}")
+
+chuoi_khac = "Giá trị: -10, nhiệt độ: -3.5 và tiền: 20-5"
+ket_qua_khac = NegativeNumberInStrings(chuoi_khac)
+print(f"\nChuỗi đầu vào: \"{chuoi_khac}\"")
+print(f"Danh sách các số nguyên âm: {ket_qua_khac}")
